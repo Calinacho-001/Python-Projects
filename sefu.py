@@ -3,13 +3,22 @@
 import os.path
 import shutil
 
-path = "/Users/User/Documents/A_Sefu/A/B"
+path1 = "/Users/User/Documents/A_Sefu/A"
 
-af = os.path.exists(path)
+af = os.path.exists(path1)
 
 if not af:
-    os.makedirs(path)
-    print("The new directory is created.")
+    os.makedirs(path1)
+    print("The new A directory is created.")
+
+
+path2 = "/Users/User/Documents/A_Sefu/B"
+
+af = os.path.exists(path2)
+
+if not af:
+    os.makedirs(path2)
+    print("The new B directory is created.")
 
 print("Now we create the buba.txt file in the A folder")
 print("Press \\ ENTER \\ to continue.")
@@ -35,7 +44,7 @@ print("Press \\ ENTER \\ to continue.")
 y2 = input()
 
 srcf = r"/Users/User/Documents/A_Sefu/A/buba.txt"
-desf = r"/Users/User/Documents/A_Sefu/A/B/buba.txt"
+desf = r"/Users/User/Documents/A_Sefu/B/buba.txt"
 
 shutil.move(srcf , desf)
 
